@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Website Design</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,200&family=Roboto:ital,wght@0,100;0,400;1,400&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://use.fontawesome.com/15ae796784.js"></script>
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"
+          ><img
+            src="/eduford_img/logo2.png"
+            alt="logo"
+            width="70px"
+            height="40px"
+        /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/contacts.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="text-box">
+        <h1>World's Biggest Steel Industry</h1>
+        <p>
+          We are trusted by over 50 countries around the globe<br />
+          Just like you want it, we deliver.
+        </p>
+        <a class="hero-btn" href="">Visit Us to know more</a>
+      </div>
+    </section>
+
+    <section class="services">
+      <h1>Thor Services</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="row">
+        <div class="services-col">
+          <h3>Stainless Steel Production</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+            quisquam ad quam accusamus numquam esse? Aspernatur placeat,
+            incidunt quo inventore eveniet animi sed.
+          </p>
+        </div>
+        <div class="services-col">
+          <h3>British Steel Production</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+            quisquam ad quam accusamus numquam esse? Aspernatur placeat,
+            incidunt quo inventore eveniet animi sed.
+          </p>
+        </div>
+        <div class="services-col">
+          <h3>Mild Steel Production</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+            quisquam ad quam accusamus numquam esse? Aspernatur placeat,
+            incidunt quo inventore eveniet animi sed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- products -->
+
+    <section class="product">
+      <h1>Thor Products</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="row">
+        <div class="product-col">
+          <img src="/eduford_img/pots.jpg" alt="pots" />
+          <div class="layer">
+            <h3>Pots</h3>
+          </div>
+        </div>
+        <div class="product-col">
+          <img src="/eduford_img/holder.jpg" alt="holder" />
+          <div class="layer">
+            <h3>Holder</h3>
+          </div>
+        </div>
+        <div class="product-col">
+          <img src="/eduford_img/roller.jfif" alt="pots" />
+          <div class="layer">
+            <h3>Roller</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- facilities -->
+
+    <section class="facilities">
+      <h1>Thor Locations In Your Country</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="row">
+        <div class="facilities-col">
+          <img src="/eduford_img/london.png" alt="london" />
+          <h3>London Headquarters</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            ducimus.
+          </p>
+        </div>
+        <div class="facilities-col">
+          <img src="/eduford_img/washington.png" alt="washington" />
+          <h3>Washington Headquarters</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            ducimus.
+          </p>
+        </div>
+        <div class="facilities-col">
+          <img src="/eduford_img/newyork.png" alt="newyork" />
+          <h3>Newyork Headquarters</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            ducimus.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- cta -->
+
+    <section class="cta">
+      <h1>
+        Get the best and most reliable product today <br />
+        Anywhere you are in the world
+      </h1>
+      <a href="/contacts.html" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <section class="footer">
+      <h4>About Thor</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit expedita
+        tempora est voluptate sunt, debitis <br />
+        libero qui fugiat, cum vel dolorum accusantium ea quod quas eos dolor
+        sed mollitia molestias magnam nihil veritatis repudiandae? Minus, ut!<br />
+        Similique, quos id tempore delectus dignissimos quas ducimus soluta sint
+        voluptates <br />
+        corrupti ad! Iure?
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook-official"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <p>Thor 2022</p>
+    </section>
+
+    <script>
+      const navlinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navlinks.style.display = "block";
+      }
+
+      function hideMenu() {
+        navlinks.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

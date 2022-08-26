@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact us</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+    />
+    <link rel="stylesheet" href="/contacts.style.css" />
+    <script src="https://use.fontawesome.com/15ae796784.js"></script>
+  </head>
+  <body>
+    <section>
+      <nav>
+        <a href="index.html"
+          ><img
+            src="/eduford_img/logo2.png"
+            alt="logo"
+            width="70px"
+            height="40px"
+        /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+    </section>
+    <hr />
+    <section class="container">
+      <div class="contact-box">
+        <div class="left"></div>
+        <div class="right">
+          <h2>Contact Us</h2>
+          <input type="text" class="field" placeholder="Your Name" id="name" />
+          <input
+            type="text"
+            class="field"
+            placeholder="Your Email"
+            id="email"
+          />
+          <input type="text" class="field" placeholder="Subject" id="subject" />
+          <textarea placeholder="Message" class="field" id="msg"></textarea>
+          <button class="btn" onclick="message()">Send</button>
+        </div>
+        <div class="message">
+          <div class="success" id="success">
+            Your Message Successfully Sent!
+          </div>
+          <div class="danger" id="danger">Feilds Can't be Empty!</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="icons">
+        <i class="fa fa-facebook-official"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <p>Thor 2022</p>
+    </section>
+
+    <script>
+      const navlinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navlinks.style.display = "block";
+      }
+
+      function hideMenu() {
+        navlinks.style.display = "none";
+      }
+
+      function message() {
+        let Name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let msg = document.getElementById("msg");
+        let subject = document.getElementById("subject");
+        const success = document.getElementById("success");
+        const danger = document.getElementById("danger");
+
+        if (
+          Name.value === "" ||
+          email.value === "" ||
+          msg.value === "" ||
+          subject.value === ""
+        ) {
+          danger.style.display = "block";
+          alert("Required fields are empty");
+        } else {
+          setTimeout(() => {
+            Name.value = "";
+            email.value = "";
+            msg.value = "";
+          }, 2000);
+
+          success.style.display = "block";
+          alert("Message sent successfully");
+          window.location.href = "/index.html";
+        }
+
+        setTimeout(() => {
+          danger.style.display = "none";
+          success.style.display = "none";
+        }, 4000);
+      }
+    </script>
+  </body>
+</html>
